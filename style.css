@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+
+body {
+  background-image: linear-gradient(
+    319deg,
+    #663dff 0%,
+    #601187 37%,
+    #bc0074 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Dancing Script", cursive;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
+}
+
+.card,
+.message-container {
+  background-image: url("./mosque-2019199_640.jpg");
+  background-size: 330px;
+  background-position-y: -180px;
+  border-radius: 15px;
+  box-shadow: 0 0 40px black;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  display: none;
+  height: 190px;
+}
+
+.card-header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: whitesmoke;
+  text-shadow: 0 0 10px rgb(230, 0, 255);
+}
+
+.card-header h2 {
+  color: whitesmoke;
+  text-shadow: 0 0 10px magenta;
+  margin: 10px 0 0;
+}
+
+.card-body img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card-body img:hover {
+  transform: scale(1.4);
+}
+.card-body img:active {
+  transform: scale(1.4);
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 170px;
+  text-align: center;
+  align-items: center;
+}
+
+.stars li {
+  list-style: none;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.stars li:hover {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+.message-container p {
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: -10px;
+}
+
+.lightsaber {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px #00f0ff, inset 0 0 15px #00f0ff;
+  z-index: 0;
+  animation: colorChange 1s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    background: linear-gradient(45deg, #ff0000, #ff7f00);
+  }
+
+  /* Merah ke Jingga */
+  20% {
+    background: linear-gradient(45deg, #ff7f00, #ffff00);
+  }
+
+  /* Jingga ke Kuning */
+  40% {
+    background: linear-gradient(45deg, #ffff00, #00ff00);
+  }
+
+  /* Kuning ke Hijau */
+  60% {
+    background: linear-gradient(45deg, #00ff00, #0000ff);
+  }
+
+  /* Hijau ke Biru */
+  80% {
+    background: linear-gradient(45deg, #0000ff, #4b0082);
+  }
+
+  /* Biru ke Nila */
+  100% {
+    background: linear-gradient(45deg, #4b0082, #8b00ff);
+  }
+
+  /* Nila ke Ungu */
+}
+
+.kotak {
+  width: 92%;
+  height: 237px;
+  animation: colorChange 1s infinite;
+  box-shadow: 0 0 50px skyblue;
+  border-radius: 20px;
+  z-index: 1;
+  border: 1px solid white;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.link {
+  animation: colorChange 1s infinite;
+  font-weight: bold;
+}
+
+.link:hover {
+  transform: scale(1.2);
+}

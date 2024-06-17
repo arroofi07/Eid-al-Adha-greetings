@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat Hari Raya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="kotak"></div>
+  <div class="lightsaber"></div>
+  <div class="container">
+    <div class="card" id="card">
+      <div class="card-header">
+        <h1>Eid Al Adha</h1>
+        <h2>1445 hijriah</h2>
+        <h3
+          style="color: whitesmoke; text-shadow: 0 0 10px magenta;font-family: 'Times New Roman', Times, serif; font-size: 16px; margin-bottom: -10px;">
+          buka amplopnya ya dekz...</h3>
+      </div>
+      <div class="card-body">
+        <img src="—Pngtree—watercolor texture letter envelope_6644633.png" alt="Surat" id="openLetter">
+      </div>
+    </div>
+    <div class="message-container" id="messageContainer">
+      <div class="stars" id="stars">
+        <h1 style="color: white; text-shadow: 0 0 10px black;">Pencet Bintangnya satu-satu</h1>
+        <li>⭐</li>
+        <li>⭐</li>
+        <li>⭐</li>
+        <li>⭐</li>
+      </div>
+      <p id="message" class="hidden" style="text-shadow: 0 0 10px black; font-weight: bold;">
+        <span>
+          Pergi ke pasar beli pepaya,<br>
+          Hari cerah, suasana bahagia. <br>
+          Idul Adha sudah tiba, <br>
+          Daging kambing kita bagi-bagi ya. <br><br>
+        </span>
+        <span style="color: white; text-shadow: 0 0 10px black; font-weight: bold;">Kalau tidak ada daging, duit 100
+          boleh la</span>
+        tapi dollar ya kalau rupiah takut inflasi 😉😱
+      </p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('card').style.display = 'block';
+
+    document.getElementById('openLetter').addEventListener('click', function () {
+      document.getElementById('card').style.display = 'none';
+      document.getElementById('messageContainer').style.display = 'block';
+    });
+
+    const stars = document.querySelectorAll('#stars li');
+    let clickedStars = 0;
+
+    stars.forEach(star => {
+      star.addEventListener('click', function () {
+        this.style.display = 'none';
+        clickedStars++;
+        if (clickedStars === 4) {
+          document.getElementById('message').classList.remove('hidden');
+          document.getElementById('stars').style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
